@@ -43,6 +43,9 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
+# API
+BOARD_SHIPPING_API_LEVEL := 31
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
