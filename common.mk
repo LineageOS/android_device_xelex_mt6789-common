@@ -240,6 +240,7 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-subhal-impl-1.0
 
 # Shipping API level
+BOARD_SHIPPING_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := 34
 
 # Soong namespaces
