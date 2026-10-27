@@ -18,7 +18,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/xelex/Q25',
+    'device/xelex/mt6789-common',
     'hardware/mediatek',
     'hardware/mediatek/libion_mtk',
     'hardware/mediatek/libmtkperf_client',
@@ -83,21 +83,10 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
     (
-        'vendor/lib64/lib3a.flash.so',
-        'vendor/lib64/lib3a.ae.stat.so',
-        'vendor/lib64/lib3a.sensors.color.so',
-        'vendor/lib64/lib3a.sensors.flicker.so',
-    ): blob_fixup()
-        .add_needed('liblog.so'),
-    (
         'vendor/lib/libGsFace_ca.so',
         'vendor/lib64/libGsFace_ca.so',
     ): blob_fixup()
         .add_needed('libteec.so'),
-    (
-        'vendor/lib64/libcam.utils.sensorprovider.so',
-    ): blob_fixup()
-        .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
     (
         'vendor/lib64/libmnl_mtk.so'
     ): blob_fixup()
@@ -158,9 +147,6 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libstagefright_foundation-v33.so'),
     (
         'vendor/bin/hw/mtkfusionrild',
-        'vendor/lib/libmtkcam_stdutils.so',
-        'vendor/lib64/libmtkcam_stdutils.so',
-        'vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so',
     ): blob_fixup()
         .add_needed('libutils-v32.so'),
     (
@@ -178,12 +164,11 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'Q25',
+    'mt6789-common',
     'xelex',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
-    add_firmware_proprietary_file=True,
 )
 
 if __name__ == '__main__':

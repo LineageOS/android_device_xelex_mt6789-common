@@ -46,10 +46,6 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
-# AAPT
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := hdpi
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
@@ -122,12 +118,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.mediatek.ims.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.mediatek.telephony.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.mediatek.telephony.xml
 
-# Keylayout
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/idc/Q25_keyboard.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/Q25_keyboard.idc \
-    $(LOCAL_PATH)/configs/keylayout/Q25_keyboard.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Q25_keyboard.kl \
-    $(LOCAL_PATH)/configs/keychars/Q25_keyboard.kcm:$(TARGET_COPY_OUT_VENDOR)/usr/keychars/Q25_keyboard.kcm
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
@@ -159,7 +149,6 @@ $(call inherit-product, hardware/mediatek/overlay/mssi.mk)
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayTarget \
     FrameworksResOverlayTarget \
-    SystemUIOverlayTarget \
     LineageSDKResTarget
 
 DEVICE_PACKAGE_OVERLAYS += \
@@ -288,4 +277,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/xelex/Q25/Q25-vendor.mk)
+$(call inherit-product, vendor/xelex/mt6789-common/mt6789-common-vendor.mk)
