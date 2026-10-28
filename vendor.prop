@@ -250,6 +250,9 @@ telephony.lteOnCdmaDevice=1
 # Sensors
 ro.vendor.mtk.sensor.support=yes
 
+# TEE
+ro.vendor.tk.mdl=Q25
+
 # Thermal
 ro.vendor.mtk_thermal_2_0=1
 
