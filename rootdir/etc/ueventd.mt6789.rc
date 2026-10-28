@@ -198,6 +198,9 @@
 /dev/touch                0660   root       system
 /dev/hotknot              0660   root       system
 
+# Keyboard touch panel navigation mode
+/sys/devices/platform/soc/1101a000.i2c/i2c-6/6-0020/input/input*   key_mode_enable   0660   system   system
+
 #hang_detect
 /dev/RT_Monitor           0660   system     system
 /dev/kick_powerkey        0660   system     system
