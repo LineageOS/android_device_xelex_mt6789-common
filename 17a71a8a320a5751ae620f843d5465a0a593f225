@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5f403c84_39476746",
+        "filename": "vendor.prop",
+        "patchSetId": 1
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 34519
+      },
+      "writtenOn": "2026-10-28T10:10:53Z",
+      "side": 1,
+      "message": "Isn\u0027t this to be set in the Q25 base repo instead of the common tree?",
+      "revId": "17a71a8a320a5751ae620f843d5465a0a593f225",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
