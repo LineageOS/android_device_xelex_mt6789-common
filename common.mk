@@ -250,7 +250,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/mediatek \
     hardware/mediatek/libion_mtk \
-    hardware/mediatek/libmtkperf_client
+    hardware/mediatek/libmtkperf_client \
+    hardware/mediatek/wlan/wifi_hal
 
 # USB
 PRODUCT_PACKAGES += \
@@ -263,18 +264,18 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.legacy
 
 # Wi-Fi
-$(call soong_config_set_bool,mediatek_wifi_hal,use_pre_u_qpr2_struct,true)
-
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
-    libwifi-hal-wrapper \
+    libwifi-hal-mediatek \
     wlan_assistant \
     wpa_supplicant
 
+PRODUCT_PACKAGES += \
+    wpa_supplicant.conf
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
 # Inherit the proprietary files
