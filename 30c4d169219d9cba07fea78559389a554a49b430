@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cbd90d78_67a9172f",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-11-14T15:39:27Z",
+      "side": 1,
+      "message": "You don\u0027t need this since you have it in soong_namespaces.",
+      "range": {
+        "startLine": 159,
+        "startChar": 36,
+        "endLine": 159,
+        "endChar": 56
+      },
+      "revId": "30c4d169219d9cba07fea78559389a554a49b430",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7b4eeed8_aa1b1377",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-11-14T15:39:27Z",
+      "side": 1,
+      "message": "Ditto",
+      "range": {
+        "startLine": 161,
+        "startChar": 29,
+        "endLine": 161,
+        "endChar": 49
+      },
+      "revId": "30c4d169219d9cba07fea78559389a554a49b430",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
