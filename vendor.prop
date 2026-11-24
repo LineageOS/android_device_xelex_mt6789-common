@@ -262,6 +262,9 @@ vendor.usb.controller=musb-hdrc
 # Wi-Fi
 ro.vendor.wifi.sap.concurrent.iface=ap1
 ro.vendor.wifi.sap.interface=ap0
+wifi.direct.interface=p2p0
+wifi.interface=wlan0
+wifi.tethering.interface=ap0
 
 # Widevine
 ro.vendor.mtk_widevine_drm_l3_support=1

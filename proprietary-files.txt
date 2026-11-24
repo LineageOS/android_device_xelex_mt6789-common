@@ -256,7 +256,6 @@ vendor/etc/init/init.wmt_drv.rc
 vendor/lib/libconnfem.so
 vendor/lib/libwpa_client.so
 vendor/lib/meta_wifi_data.so
-vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so
 vendor/lib64/libwpa_client.so
 vendor/lib64/meta_wifi_data.so
 
@@ -964,8 +963,34 @@ vendor/lib64/hw/android.hardware.thermal@2.0-impl.so
 vendor/lib64/hw/thermal_hal.so
 vendor/lib64/libtrm.so
 
+<<<<<<< HEAD
 # Widevine
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 vendor/lib64/libwvhidl.so
+=======
+# Trusted Execution Environment (TEE)
+vendor/bin/hw/vendor.microtrust.hardware.thh@2.0-service
+vendor/bin/teei_daemon
+vendor/etc/init/microtrust.rc
+vendor/etc/init/vendor.microtrust.hardware.thh@2.0-service.rc
+vendor/etc/vintf/manifest/manifest.microtrust.xml
+vendor/lib64/libTEECommon.so
+vendor/lib64/libgz_gp_client.so
+vendor/lib64/libgz_uree.so
+vendor/lib64/libimsg_log.so
+vendor/lib64/libteeclientjni_isee.so
+vendor/lib64/libteeclientjni_isee@1.1.so
+vendor/lib64/libteei_daemon_vfs.so
+vendor/lib64/libthha.so
+vendor/lib64/libthhclient.so
+vendor/lib64/vendor.microtrust.hardware.thh@2.0.so
+vendor/lib64/wechat.beanpod.so
+
+# Wi-Fi
+vendor/etc/init/init.wlan_drv.rc
+vendor/etc/wifi/passpointProfile.conf
+vendor/firmware/WIFI_RAM_CODE_soc7_0_1b_t_1.bin
+vendor/firmware/soc7_0_ram_wmmcu_1b_t_1_hdr.bin
+>>>>>>> 3d3f6bf (mt6895-common: Build the MediaTek Wi-Fi HAL and wpa_supplicant_8 lib)
